@@ -18,4 +18,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_setting">Setting</string>
+
+    <string name="please_wait">Please wait</string>
 </resources>
