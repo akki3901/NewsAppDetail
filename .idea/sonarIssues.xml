@@ -3,7 +3,17 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../KiplePark/app/src/main/java/com/kiple/kiplepark/fcm/MyFirebaseMessagingService.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../NewsApp-master/app/src/main/AndroidManifest.xml">
           <value>
             <set />
           </value>
@@ -18,7 +28,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/base/BaseRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/common/Constants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Author.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Content.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Entry.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Feed.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Link.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/Rss.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/model/RssFeed.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/network/ApisInterface.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/repository/HomeRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/retrofit/APICallback.java">
           <value>
             <set />
           </value>
@@ -38,6 +103,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/retrofit/CallbackInterface.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/retrofit/HttpConstant.java">
           <value>
             <set />
@@ -49,6 +119,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/retrofit/NetModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/ui/home/HomeFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/webtomob/newsapp/ui/home/HomeViewModel.java">
           <value>
             <set />
           </value>
@@ -84,6 +164,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/build.gradle">
           <value>
             <set />
           </value>
