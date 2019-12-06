@@ -1,13 +1,12 @@
 package com.webtomob.newsapp.ui.splash;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.webtomob.newsapp.MainActivity;
+import com.webtomob.newsapp.ui.MainActivity;
 import com.webtomob.newsapp.R;
 
 

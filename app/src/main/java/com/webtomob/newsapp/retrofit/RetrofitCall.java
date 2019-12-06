@@ -1,4 +1,4 @@
-package com.webtomob.newsapp.base;
+package com.webtomob.newsapp.retrofit;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,7 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
-public class BaseRepository {
+public class RetrofitCall {
 
     private static Retrofit retrofit = null;
 

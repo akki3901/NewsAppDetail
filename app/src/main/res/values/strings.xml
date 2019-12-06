@@ -2,19 +2,20 @@
     <string name="app_name">NewsApp</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Welcome ABC</string>
+    <string name="nav_header_subtitle">abc@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Settings</string>
+    <string name="menu_gallery">Developer\'s list</string>
+    <string name="menu_slideshow">Help and Support</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="sign_in">Sign In</string>
 
-    <string name="title_home">Home</string>
+    <string name="title_news">News</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_setting">Setting</string>

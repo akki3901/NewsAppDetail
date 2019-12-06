@@ -1,13 +1,11 @@
 package com.webtomob.newsapp.repository;
 
-import android.util.Log;
-
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 
-import com.webtomob.newsapp.base.BaseRepository;
+import com.webtomob.newsapp.retrofit.RetrofitCall;
 import com.webtomob.newsapp.model.DataWrapper;
 import com.webtomob.newsapp.model.Feed;
 import com.webtomob.newsapp.retrofit.APICallback;
@@ -24,7 +22,7 @@ import retrofit2.Response;
  *  ViewModel will return needed data to view (activity/fragment)
  */
 
-public class HomeRepository extends BaseRepository implements CallbackInterface {
+public class HomeRepository extends RetrofitCall implements CallbackInterface {
 
     private final MutableLiveData<DataWrapper> newsData = new MutableLiveData<>();
     private final DataWrapper<Feed> feedDataWrapper = new DataWrapper<>();

@@ -5,6 +5,7 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Root;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Root(name = "feed" , strict = false)
@@ -24,11 +25,10 @@ public class Feed {
     private String updated;
 
     @ElementList(inline = true, required = false)
-    public List<Entry> entry;
+    public ArrayList<Entry> entry;
 
     /*@Element
-    private Link link;*/
-
+    private String link;*/
 
     public String getTitle() {
         return title;
@@ -54,11 +54,11 @@ public class Feed {
         this.id = id;
     }
 
-    public List<Entry> getEntry() {
+    public ArrayList<Entry> getEntry() {
         return entry;
     }
 
-    public void setEntry(List<Entry> entry) {
+    public void setEntry(ArrayList<Entry> entry) {
         this.entry = entry;
     }
 
@@ -70,11 +70,11 @@ public class Feed {
         this.updated = updated;
     }
 
-    /*public Link getLink() {
+    /*public String getLink() {
         return link;
     }
 
-    public void setLink(Link link) {
+    public void setLink(String link) {
         this.link = link;
     }*/
 }
