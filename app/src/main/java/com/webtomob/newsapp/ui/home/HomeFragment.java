@@ -55,39 +55,12 @@ public class HomeFragment extends Fragment {
             public void onChanged(Feed s) {
                 newsList.addAll(s.getEntry());
                 settingRecyclerView();
-
-                /*Glide.with(getContext())
-                        .asBitmap()
-                        .load(s.getIcon())
-                        .apply(RequestOptions.skipMemoryCacheOf(true))
-                        .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE))
-                        //  override for old devices with low memory
-                        .apply(RequestOptions.overrideOf(500))
-                        .into(new SimpleTarget<Bitmap>() {
-                            @Override
-                            public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
-                                Drawable drawable = new BitmapDrawable(getResources(), resource);
-                                imageview.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                                imageview.setImageDrawable(drawable);
-                            }
-                        });
-
-                String dateTime = Utility.changeDateFormat(s.getUpdated());
-                dateTextView.setText(dateTime);*/
-
-                Log.v(" data ... ", " entry ... " + s.getUpdated());
-                Log.v(" data ... ", " title ... " + s.getTitle());
-                Log.v(" data ... ", " Icon ... " + s.getIcon());
-                Log.v(" data ... ", " author ... " + s.getEntry().get(0).getAuthor().getName());
-                Log.v(" data ... ", " entry ... " + s.getEntry());
-                Log.v(" data ... ", " entry ... " + s.getEntry());
             }
         });
     }
 
 
     private void settingRecyclerView(){
-        Log.v("Size is ... ", newsList.size()+ " ");
         HomeAdpater inboxAdapter = new HomeAdpater(getContext(), newsList);
         newsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         newsRecyclerView.setAdapter(inboxAdapter);
