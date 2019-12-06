@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         versionTextView.setText("V " + BuildConfig.VERSION_NAME);
 
         drawer = findViewById(R.id.drawer_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         NavController navControllerBottom = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navControllerBottom, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navView, navControllerBottom);
+
+
     }
 
     /*@Override
