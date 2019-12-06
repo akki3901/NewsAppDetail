@@ -46,7 +46,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-simplexml:2.5.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
 
-    /*implementation 'com.github.Tickaroo.tikxml:annotation:0.8.15'
-    implementation 'com.github.Tickaroo.tikxml:core:0.8.15'*/
+    //  image management library
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
 }

@@ -20,6 +20,9 @@ public class Feed {
     @Element
     private String id;
 
+    @Element
+    private String updated;
+
     @ElementList(inline = true, required = false)
     public List<Entry> entry;
 
@@ -57,6 +60,14 @@ public class Feed {
 
     public void setEntry(List<Entry> entry) {
         this.entry = entry;
+    }
+
+    public String getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(String updated) {
+        this.updated = updated;
     }
 
     /*public Link getLink() {
