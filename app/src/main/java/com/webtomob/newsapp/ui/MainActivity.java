@@ -92,11 +92,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (navView.getSelectedItemId() != R.id.navigation_home) {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                navView.setSelectedItemId(R.id.navigation_home);
+                super.onBackPressed();
+            }
         } else {
-            navView.setSelectedItemId(R.id.navigation_home);
-            super.onBackPressed();
+            finish();
         }
     }
 }
