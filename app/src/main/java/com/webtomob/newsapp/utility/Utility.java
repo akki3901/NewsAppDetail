@@ -1,5 +1,15 @@
 package com.webtomob.newsapp.utility;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.webtomob.newsapp.R;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,4 +31,23 @@ public class Utility {
         }
         return newDateString;
     }
+
+    /**
+     * @param context
+     * @return true, if Internet available otherwise false
+     */
+    public static boolean isInternetAvailable(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo[] networkInfos = connectivity.getAllNetworkInfo();
+            if (networkInfos != null)
+                for (NetworkInfo info : networkInfos) {
+                    if (info.getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    }
+                }
+        }
+        return false;
+    }
+
 }

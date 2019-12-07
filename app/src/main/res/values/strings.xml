@@ -20,5 +20,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_setting">Setting</string>
 
-    <string name="please_wait">Please wait</string>
+    <string name="no_internet">Please connect to working internet.</string>
+    <string name="ok">Ok</string>
 </resources>

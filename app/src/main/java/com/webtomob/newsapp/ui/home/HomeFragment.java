@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -23,6 +25,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.google.android.material.snackbar.Snackbar;
 import com.webtomob.newsapp.R;
 import com.webtomob.newsapp.model.Entry;
 import com.webtomob.newsapp.model.Feed;
@@ -35,12 +38,14 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private ArrayList<Entry> newsList = new ArrayList<>();
     private RecyclerView newsRecyclerView;
+    private ConstraintLayout constraintLayout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        constraintLayout = root.findViewById(R.id.constraintLayout);
         newsRecyclerView = root.findViewById(R.id.newsRecyclerView);
 
         settingData();
@@ -50,13 +55,19 @@ public class HomeFragment extends Fragment {
 
 
     private void settingData(){
-        homeViewModel.getNews().observe(this, new Observer<Feed>() {
-            @Override
-            public void onChanged(Feed s) {
-                newsList.addAll(s.getEntry());
-                settingRecyclerView();
-            }
-        });
+        if(Utility.isInternetAvailable(getContext())) {
+            homeViewModel.getNews().observe(this, new Observer<Feed>() {
+                @Override
+                public void onChanged(Feed s) {
+                    if(s != null) {
+                        newsList.addAll(s.getEntry());
+                        settingRecyclerView();
+                    }
+                }
+            });
+        }else{
+            Toast.makeText(getContext(), getString(R.string.no_internet), Toast.LENGTH_LONG).show();
+        }
     }
 
 
