@@ -31,6 +31,7 @@
             android:textAllCaps="true"
             android:textColor="@color/colorLightGrey"
             android:textSize="@dimen/text_size_xsmall"
+            android:ellipsize="end"
             app:layout_constraintEnd_toStartOf="@+id/dateTextView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
