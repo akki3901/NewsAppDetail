@@ -18,13 +18,6 @@ public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<Feed> feedMutableLiveData;
 
-
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
-
-    }
-
     public LiveData<Feed> getNews() {
         feedMutableLiveData = new MutableLiveData<>();
 
@@ -35,7 +28,7 @@ public class HomeViewModel extends ViewModel {
                 if (null != dataWrapper.getData()) {
                     //  success response
                     Feed feedResponse = (Feed) dataWrapper.getData();
-                    processVersionCheck(feedResponse);
+                    processFeedResponse(feedResponse);
                 } else {
                     //  handle API exceptions or failed requests
                 }
@@ -44,7 +37,7 @@ public class HomeViewModel extends ViewModel {
         return feedMutableLiveData;
     }
 
-    void processVersionCheck(Feed feedResponse) {
+    void processFeedResponse(Feed feedResponse) {
         feedMutableLiveData.postValue(feedResponse);
     }
 

@@ -50,29 +50,29 @@ public class HomeRepository extends RetrofitCall implements CallbackInterface {
             default:
                 //  no flag, no data, return empty objects
                 final MutableLiveData<DataWrapper> emptyLiveData = new MutableLiveData<>();
-                /*final DataWrapper<VersionCheckResponse> emptyDataWrapper = new DataWrapper<>();
-                emptyLiveData.postValue(emptyDataWrapper);*/
+                final DataWrapper<Feed> emptyDataWrapper = new DataWrapper<>();
+                emptyLiveData.postValue(emptyDataWrapper);
                 return emptyLiveData;
 
         }
     }
 
     @Override
-    public LiveData<DataWrapper> onError(Response response, @Nullable HttpConstant.ApiFlags apiFlags) {
+    public LiveData<DataWrapper> onError(Response<Feed> response, @Nullable HttpConstant.ApiFlags apiFlags) {
         assert apiFlags != null;
         switch (apiFlags){
 
             case GET_NEWS:
-                /*VersionCheckResponse data = (VersionCheckResponse) response.body();
+                Feed data = response.body();
                 feedDataWrapper.setData(data);
-                newsdata.postValue(feedDataWrapper);*/
+                newsData.postValue(feedDataWrapper);
                 return newsData;
 
             default:
                 //  no flag, no data, return empty objects
                 final MutableLiveData<DataWrapper> emptyLiveData = new MutableLiveData<>();
-                /*final DataWrapper<VersionCheckResponse> emptyDataWrapper = new DataWrapper<>();
-                emptyLiveData.postValue(emptyDataWrapper);*/
+                final DataWrapper<Feed> emptyDataWrapper = new DataWrapper<>();
+                emptyLiveData.postValue(emptyDataWrapper);
                 return emptyLiveData;
         }
     }
@@ -83,17 +83,15 @@ public class HomeRepository extends RetrofitCall implements CallbackInterface {
         switch (apiFlags) {
 
             case GET_NEWS:
-//                final MutableLiveData<DataWrapper> versionCheckFail = new MutableLiveData<>();
-//                final DataWrapper<VersionCheckResponse> feedDataWrapper = new DataWrapper<>();;
-                /*feedDataWrapper.setApiException(t);
-                newsdata.postValue(feedDataWrapper);*/
+                feedDataWrapper.setApiException(t);
+                newsData.postValue(feedDataWrapper);
                 return newsData;
 
             default:
                 //  no flag, no data, return empty objects
                 final MutableLiveData<DataWrapper> emptyLiveData = new MutableLiveData<>();
-                /*final DataWrapper<VersionCheckResponse> emptyDataWrapper = new DataWrapper<>();
-                emptyLiveData.postValue(emptyDataWrapper);*/
+                final DataWrapper<Feed> emptyDataWrapper = new DataWrapper<>();
+                emptyLiveData.postValue(emptyDataWrapper);
                 return emptyLiveData;
         }
     }
@@ -104,8 +102,8 @@ public class HomeRepository extends RetrofitCall implements CallbackInterface {
 
         //  no flag, no data, return empty objects
         final MutableLiveData<DataWrapper> emptyLiveData = new MutableLiveData<>();
-        /*final DataWrapper<VersionCheckResponse> emptyDataWrapper = new DataWrapper<>();
-        emptyLiveData.postValue(emptyDataWrapper);*/
+        final DataWrapper<Feed> emptyDataWrapper = new DataWrapper<>();
+        emptyLiveData.postValue(emptyDataWrapper);
         return emptyLiveData;
     }
 }
